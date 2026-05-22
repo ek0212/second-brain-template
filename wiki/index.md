@@ -20,6 +20,7 @@ curated pages are created, renamed, merged, or retired.
 ## Maintenance
 
 - Schema: `schema/wiki-schema.md`
+- Instruction transport: `schema/instruction-transport.md`
+- Daily curation automation: `schema/daily-curation-automation.md`
 - Category map: `schema/category-map.md`
 - Page template: `schema/page-template.md`
-

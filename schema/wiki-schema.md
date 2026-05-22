@@ -3,7 +3,7 @@
 This repository is a second brain maintained from raw notes, exports, documents,
 conversations, and other source material. The goal is not to perfectly file
 everything on the first pass. The goal is to preserve sources, then gradually
-curate them into reliable, useful pages.
+curate them into reliable, useful pages that compound over time.
 
 The vault is intended to work well in Obsidian. Optimize for readable filenames,
 wikilinks, backlinks, aliases, tags, and a useful graph.
@@ -14,7 +14,22 @@ wikilinks, backlinks, aliases, tags, and a useful graph.
 - `raw/processed/` contains original source material after review.
 - `wiki/` contains curated pages written from raw material and direct knowledge.
 - `schema/` contains maintenance instructions, templates, category definitions, and workflow notes.
-- `.agents/` contains agent-facing rules and task workflows.
+- `.agents/` contains agent-facing automation definitions, rules, and task workflows.
+
+## Compounding Principle
+
+The wiki should become more valuable with every useful interaction. An agent
+should not only answer questions or summarize sources; when the result is durable,
+it should improve the maintained artifact.
+
+Examples of compounding work:
+
+- a raw source becomes one or more curated pages
+- a good answer becomes a new section or page
+- a contradiction becomes an `Open Questions` item
+- a repeated search becomes an index entry or hub page
+- a loose note becomes a link to an existing person, place, project, decision, or concept
+- a maintenance pass removes duplication and improves navigation
 
 ## Curated Pages
 
@@ -90,3 +105,8 @@ when curated pages are created, renamed, merged, or retired.
 The index should list useful hubs and important pages. It does not need to list
 every tiny note unless that is useful for the vault.
 
+## Log
+
+`wiki/log.md` records meaningful curation and maintenance work. It gives future
+agents a quick way to see how the vault has evolved without turning `AGENTS.md`
+into a change history.
