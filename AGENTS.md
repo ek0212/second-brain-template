@@ -11,6 +11,8 @@ compound over time.
 - `.agents/rules/` contains path-scoped constraints.
 - `.agents/skills/` contains task-specific workflows.
 - `AGENTS.md` should stay small. Do not turn it into a mini-wiki of the vault.
+- Update `schema/` before making major structural changes.
+- Always inspect current files before relying on summaries.
 
 ## Knowledge Lifecycle
 
@@ -18,20 +20,18 @@ compound over time.
 - Reviewed source material moves to `raw/processed/`.
 - Durable synthesis lives in `wiki/`.
 - Good answers and maintenance discoveries should be filed back into `wiki/` when durable.
+- Preserve raw material. Do not rewrite originals for style.
 - Supporting files live near their source bundle when possible.
 - Shared attachments may live in `attachments/`.
 
-## Hard Rules
+## Wiki Discipline
 
-- Preserve raw material. Do not rewrite originals for style.
 - Search existing wiki pages before creating a near-duplicate.
 - Prefer concise curated pages over copied raw dumps.
 - Use Obsidian wikilinks for internal wiki references.
 - Cite processed raw sources from curated pages.
 - Update `wiki/index.md` when creating, renaming, merging, or retiring curated pages.
 - Update `wiki/log.md` after meaningful curation or maintenance work.
-- Update `schema/` before making major structural changes.
-- Always inspect current files before relying on summaries.
 
 ## Routing
 
