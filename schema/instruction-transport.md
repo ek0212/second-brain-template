@@ -7,9 +7,7 @@ without loading every detail into every session.
 
 ```text
 AGENTS.md
-  -> small always-loaded contract
-.agents/rules/
-  -> path-scoped constraints
+  -> always-loaded contract carrying the full agent rule set
 .agents/skills/
   -> task-specific workflows
 .agents/automations/
@@ -28,9 +26,7 @@ wiki/log.md
 
 ## Responsibilities
 
-`AGENTS.md` answers: What must every agent know every session?
-
-`.agents/rules/` answers: What constraints apply when touching these paths?
+`AGENTS.md` answers: What must every agent know every session, including the rules that govern raw material, wiki pages, and attachments?
 
 `.agents/skills/` answers: What procedure should run for this kind of task?
 
@@ -47,7 +43,7 @@ waiting for a one-off prompt?
 
 1. Source material enters `raw/unprocessed/`.
 2. An ingest skill turns durable pieces into `wiki/` pages.
-3. Path rules keep page shape, source citation, and index updates consistent.
+3. The `AGENTS.md` Wiki Discipline rules keep page shape, source citation, and index updates consistent.
 4. Good answers and maintenance discoveries are filed back into `wiki/`.
 5. The daily curation automation checks for new sources, weak links, stale pages, and missed updates.
 6. `wiki/index.md` and `wiki/log.md` make the next agent pass easier.

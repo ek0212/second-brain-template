@@ -16,17 +16,6 @@ Good examples:
 - Weekly link and stale-page review.
 - Monthly source audit.
 
-## Rules
-
-Use `.agents/rules/` for constraints that are always relevant or relevant to
-specific paths.
-
-Good examples:
-
-- Wiki pages need frontmatter and sources.
-- Raw material must be preserved.
-- Schema files define the operating model.
-
 ## Skills
 
 Use `.agents/skills/` for repeatable workflows and deeper procedural guidance.

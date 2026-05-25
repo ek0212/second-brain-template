@@ -32,11 +32,11 @@ moves through the vault:
 
 ```text
 AGENTS.md
-  -> points agents to stable source-of-truth files
-.agents/rules/
-  -> applies path-specific constraints while files are edited
+  -> the always-loaded contract: source-of-truth pointers, lifecycle, and wiki rules
 .agents/skills/
   -> runs repeatable workflows such as ingest, synthesis, and maintenance
+.agents/automations/
+  -> defines recurring agent work such as daily curation
 schema/
   -> stores the durable operating model humans can inspect and revise
 raw/
@@ -56,7 +56,6 @@ should leave the wiki slightly easier to use next time.
 AGENTS.md
 .agents/
   automations/
-  rules/
   skills/
 attachments/
 raw/
@@ -67,9 +66,8 @@ wiki/
   index.md
 ```
 
-- `AGENTS.md` is the small always-loaded contract for agents.
+- `AGENTS.md` is the always-loaded agent contract. It carries the full rule set.
 - `.agents/automations/` contains portable automation definitions.
-- `.agents/rules/` contains path-scoped constraints.
 - `.agents/skills/` contains repeatable workflows.
 - `schema/` contains the human-readable source of truth for how the vault works.
 - `raw/unprocessed/` is the inbox for source material.
@@ -82,12 +80,11 @@ wiki/
 1. Copy this template into a new folder.
 2. Read `schema/adapt-this-template.md`.
 3. Edit `schema/category-map.md` for the new vault's domain.
-4. Keep `AGENTS.md` small and stable.
-5. Add path-specific guidance to `.agents/rules/`.
-6. Add repeatable procedures to `.agents/skills/`.
-7. Configure a daily curation automation from `.agents/automations/daily-curation.md`.
-8. Put new source material into `raw/unprocessed/`.
-9. Ask an agent to use the ingest workflow when you are ready to curate.
+4. Adapt `AGENTS.md` if any domain-specific rule belongs in the always-loaded contract; keep it short.
+5. Add repeatable procedures to `.agents/skills/`.
+6. Configure a daily curation automation from `.agents/automations/daily-curation.md`.
+7. Put new source material into `raw/unprocessed/`.
+8. Ask an agent to use the ingest workflow when you are ready to curate.
 
 ## Bootstrap Prompt
 
@@ -96,7 +93,7 @@ Use a prompt like this when pointing an agent at a new folder:
 ```text
 Use this second-brain template for this folder. Adapt the category map and wiki
 index to the folder's domain, but preserve the raw/unprocessed -> raw/processed
--> wiki lifecycle, AGENTS.md contract, .agents rules, .agents skills, and daily
-curation automation pattern. Keep AGENTS.md small. Put domain-specific behavior
-in schema, rules, skills, or automation definitions.
+-> wiki lifecycle, AGENTS.md contract, .agents skills, and daily curation
+automation pattern. Keep AGENTS.md small. Put domain-specific behavior in
+schema, skills, or automation definitions.
 ```

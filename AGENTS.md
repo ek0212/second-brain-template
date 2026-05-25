@@ -8,10 +8,9 @@ compound over time.
 
 - `schema/` contains the durable rules, templates, category map, and workflows.
 - `.agents/automations/` contains portable automation definitions.
-- `.agents/rules/` contains path-scoped constraints.
 - `.agents/skills/` contains task-specific workflows.
-- `AGENTS.md` should stay small. Do not turn it into a mini-wiki of the vault.
-- Update `schema/` before making major structural changes.
+- `AGENTS.md` is the single source for agent rules. Keep it short, stable, and broadly applicable. Do not duplicate its rules into other files or turn it into a mini-wiki of the vault.
+- Update `schema/` before making major structural changes. If the vault structure stops fitting real notes, update schema first.
 - Always inspect current files before relying on summaries.
 
 ## Knowledge Lifecycle
@@ -20,15 +19,19 @@ compound over time.
 - Reviewed source material moves to `raw/processed/`.
 - Durable synthesis lives in `wiki/`.
 - Good answers and maintenance discoveries should be filed back into `wiki/` when durable.
-- Preserve raw material. Do not rewrite originals for style.
+- Treat raw material as source evidence, not polished writing. Preserve original wording and filenames. Do not rewrite or clean up raw notes in place; if curation is useful, create or update a page in `wiki/` instead.
 - Supporting files live near their source bundle when possible.
-- Shared attachments may live in `attachments/`.
+- Shared attachments may live in `attachments/`. Link to them from the wiki page or source note that depends on them. Avoid renaming attachments unless doing so improves traceability.
 
 ## Wiki Discipline
 
 - Search existing wiki pages before creating a near-duplicate.
-- Prefer concise curated pages over copied raw dumps.
-- Use Obsidian wikilinks for internal wiki references.
+- Prefer concise curated pages over copied raw dumps. Prefer synthesis over copied raw excerpts.
+- Use Obsidian-friendly Markdown.
+- Use wikilinks (`[[Related Page]]`) for internal references.
+- Add YAML frontmatter with `aliases`, `tags`, `status`, and `sources` to curated knowledge pages.
+- Operational pages (`wiki/index.md`, `wiki/log.md`, category `README.md` files) may use simpler maintenance formats.
+- Add a `Related` section to curated pages when cross-links are useful.
 - Cite processed raw sources from curated pages.
 - Update `wiki/index.md` when creating, renaming, merging, or retiring curated pages.
 - Update `wiki/log.md` after meaningful curation or maintenance work.

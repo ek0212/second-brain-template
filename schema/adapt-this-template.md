@@ -18,8 +18,7 @@ transport mechanism and adapt the domain model.
 
 ## What Should Stay Stable
 
-- `AGENTS.md` stays short and points to the rest of the system.
-- `.agents/rules/` holds path-scoped constraints.
+- `AGENTS.md` stays short and carries the full agent rule set.
 - `.agents/skills/` holds repeatable workflows.
 - `.agents/automations/` holds recurring workflow definitions.
 - `schema/` is the human-readable operating model.
@@ -33,7 +32,6 @@ transport mechanism and adapt the domain model.
 
 - The folders inside `wiki/`.
 - The category descriptions in `schema/category-map.md`.
-- Any path-specific rules in `.agents/rules/`.
 - Any domain-specific skills in `.agents/skills/`.
 - The daily automation prompt details if the vault has special review needs.
 
@@ -44,9 +42,8 @@ transport mechanism and adapt the domain model.
 3. Replace the starter categories in `schema/category-map.md`.
 4. Create matching folders under `wiki/`.
 5. Update `wiki/index.md` to match those folders.
-6. Add or revise rules for paths with special constraints.
-7. Add narrow skills for repeated workflows in this domain.
-8. Keep `AGENTS.md` small; point to new rules or skills instead of expanding it.
+6. Add narrow skills for repeated workflows in this domain.
+7. Keep `AGENTS.md` short; only extend it when a rule truly applies every session, otherwise put it in a skill.
 
 ## Good Adaptation Test
 
